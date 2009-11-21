@@ -1,15 +1,60 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
+
+
 <head>
-<title>MoonDog</title>
+
 <%= stylesheet_link_tag 'main' %>
-<%= stylesheet_link_tag 'base-min' %>
-<%= stylesheet_link_tag 'reset-min' %>
-<%= stylesheet_link_tag '960' %>
+
 </head>
 <body>
+<div class="wrapper">
 
-<%= yield %>
+<div id="headerContainer">
+	<div id="header">
+		<%= image_tag 'logo.png' %>
+
+		<div id="nav">
+			<a href=#>About</a> <a href=#>Services</a> <a href=#>Contact</a><%=link_to "Register", :controller => "sign_up", :action => "new" %>
+		</div>
+
+	</div>
+</div>
+
+
+<div id="contentContainer">
+
+	<div id="oneColumn">
+	<%= image_tag 'onecolumn_top.png' %>
+
+		<div id="content">
+
+			<%= yield %>
+
+		</div>
+
+	<%= image_tag 'onecolumn_bottom.png' %>
+	</div>
+
+
+
+
+</div>
+
+<div class="push"></div>
+
+</div>
+
+<div id="footerContainer">
+
+	<div id="footer">
+        <p>Copyright (c) 2008</p>
+    </div>
+</div>
+
+
 
 </body>
+
+
 </html>
