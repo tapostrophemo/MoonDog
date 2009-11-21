@@ -1,8 +1,115 @@
-h1.logo {
-  background: transparent url(../images/MoonDog_logo.png) top left no-repeat;
-  height: 465px;
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  outline-width: 0px;
+  vertical-align: baseline;
+  background: transparent;
+  font-family: Verdana, "Lucida Grande", Helvetica, Arial, sans-serif;
+  line-height: 125%;
+  color:#333333;
+  }
+
+body {
+	background:#f3f3f3;
+	height:100%;
 }
 
-div.container_12 {
-  padding: 1em;
+#bodyContainer {
+   min-height:100%;
+   position:relative;
+}
+
+p {
+margin-bottom: 18px;
+}
+
+a {
+font-weight: bold;
+color:#3098ce;
+text-decoration: none;
+}
+
+
+#headerContainer {
+    background-color: #f7f7f7;
+	background-image: url('/images/header_background.png');
+	background-repeat:repeat-x;
+	background-position: bottom left;
+
+}
+
+#header {
+	width:940px;
+	height:100px;
+	margin: 0 auto;
+	padding-top:8px;
+}
+
+#header #nav{
+float:right;
+margin-top:48px;
+}
+
+#header #nav a{
+margin-left: 8px;
+margin-right: 4px;
+}
+
+
+
+
+#contentContainer {
+	width:960px;
+	margin: 0 auto;
+
+}
+
+#oneColumn {
+	width:956px;
+    background-color: #f3f3f3;
+	background-image: url('/images/onecolumn_background.png');
+	background-repeat:repeat-y;
+	background-position: top left;
+	margin-top:30px;
+	margin-bottom:30px;
+}
+
+#content {
+	padding: 30px;
+	padding-top:10px;
+}
+
+h1 {
+color:#1e2744;
+}
+
+h2 {
+color: #b0b0b0;
+}
+
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -120px;
+}
+
+#footerContainer, .push {
+    height: 160px;
+}
+
+#footerContainer {
+background-color: #1e2744;
+}
+
+#footer {
+color: #f9f9f9;
+margin: 0 auto;
+width: 940px;
+}
+
+#footer p {
+color: #f9f9f9;
 }
