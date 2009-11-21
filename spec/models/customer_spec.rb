@@ -17,7 +17,33 @@ describe Customer do
     }
   end
 
+  before(:each) do
+    @customer = Customer.new
+    @customer.attributes = @valid_attributes
+  end
+  
   it "should create a new instance given valid attributes" do
     Customer.create!(@valid_attributes)
+  end
+
+  it "should be valid" do
+    @customer.should be_valid
+  end
+
+  describe "validations" do
+    it "should require last name" do
+      @customer.last_name = ""
+      @customer.should have(1).error_on(:last_name)
+    end
+
+    it "should require a city" do
+      @customer.city = ""
+      @customer.should have(1).error_on(:city)
+    end
+
+    it "should require a state" do
+      @customer.state = ""
+      @customer.should have(1).error_on(:state)
+    end
   end
 end
