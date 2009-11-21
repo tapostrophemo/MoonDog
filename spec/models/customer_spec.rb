@@ -11,7 +11,7 @@ describe Customer do
       :city => "value for city",
       :state => "value for state",
       :zip => "value for zip",
-      :email => "value for email",
+      :email => "john.doe@gmail.com",
       :phone => "value for phone",
       :contact_method => 1
     }
@@ -44,6 +44,33 @@ describe Customer do
     it "should require a state" do
       @customer.state = ""
       @customer.should have(1).error_on(:state)
+    end
+    
+    it "should require email" do
+	@customer.email = ""
+	@customer.should have(1).error_on(:email)
+    end
+
+    it "should verify email" do
+	verify_email('john@gmail')
+	verify_email('john')
+	verify_email('@gmail.com')
+    end
+
+    it "should require phone number" do
+	@customer.phone = ""
+	@customer.should have(1).error_on(:phone)
+    end
+
+    it "should require a contact method" do
+	@customer.contact_method = 0
+	@customer.should have(1).error_on(:contact_method)
+    end
+    
+    def verify_email(email_input)
+	@customer.email = email_input
+	@customer.should have(1).error_on(:email)
+	@customer.errors.on(:email).should == 'Email must be valid'
     end
   end
 end
