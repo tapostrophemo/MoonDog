@@ -1,3 +1,4 @@
+Attila Domokos - adomokos@gmail.com
 Erik Petersen was here
 This is Dan.
 
@@ -244,4 +245,5 @@ vendor
   External libraries that the application depends on. Also includes the plugins subdirectory.
   If the app has frozen rails, those gems also go here, under vendor/rails/.
   This directory is in the load path.
->>>>>>> d0220f07606ffa12193b1573cb5573f4c7c7f473:README
+=======
+
