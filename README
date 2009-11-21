@@ -1,3 +1,4 @@
+Attila Domokos - adomokos@gmail.com
 Erik Petersen was here
 
 == Welcome to Rails
@@ -244,4 +245,3 @@ vendor
   If the app has frozen rails, those gems also go here, under vendor/rails/.
   This directory is in the load path.
 
-Attila Domokos - adomokos@gmail.com
