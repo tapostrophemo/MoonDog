@@ -3,6 +3,7 @@
 jQuery.fn.addCategory = function() {
   this.click(function() {
     $("#category_entry").show();
+    $("#backlog_item").hide();
   });  
 };
 

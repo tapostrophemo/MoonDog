@@ -11,37 +11,40 @@
 <div class="wrapper">
 
 <div id="headerContainer">
-	<div id="header">
-		<%= image_tag 'logo.png' %>
+  <div id="header">
+    <div id="nav">
+      <% if @signed_in then %>
+	<a href="#">Login</a> <a href=#>About</a> <a href=#>Services</a> <a href=#>Contact</a><%=link_to "Register", :controller => "sign_up", :action => "new" %>
+      <% else %>
+	<a href="#">Logout</a>
+      <% end %>
+    </div>
+    <%= image_tag 'logo_blue.png' %>
 
-		<div id="nav">
-<% if @signed_in then %>
-			<a href="#">Login</a> <a href=#>About</a> <a href=#>Services</a> <a href=#>Contact</a><%=link_to "Register", :controller => "sign_up", :action => "new" %>
-<% else %>
-			<a href="#">Logout</a>
-<% end %>
-		</div>
-
-	</div>
+  </div>
 </div>
 
 
+<div id="headerLinksContainer">
+
+  <div id="headerLinks">
+    <a href=# class=selected>Best App Ever</a>  <a href=#>Logout</a> <a href=#>Jim England</a>  <a href=#>Logout</a>
+  </div>
+</div>
+
 <div id="contentContainer">
 
-	<div id="oneColumn">
-	<%= image_tag 'onecolumn_top.png' %>
+  <div id="oneColumn">
+    <%= image_tag 'onecolumn_top.png' %>
 
-		<div id="content">
+    <div id="content">
 
-			<%= yield %>
+      <%= yield %>
 
-		</div>
+    </div>
 
-	<%= image_tag 'onecolumn_bottom.png' %>
-	</div>
-
-
-
+    <%= image_tag 'onecolumn_bottom.png' %>
+  </div>
 
 </div>
 
@@ -51,9 +54,9 @@
 
 <div id="footerContainer">
 
-	<div id="footer">
-        <p>Copyright (c) 2008</p>
-    </div>
+  <div id="footer">
+    <p>2009 MoonDog. A Product of Startup Weekend Cleveland.</p>
+  </div>
 </div>
 
 
