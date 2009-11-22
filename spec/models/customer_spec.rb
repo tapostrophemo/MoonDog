@@ -47,25 +47,25 @@ describe Customer do
     end
     
     it "should require email" do
-	@customer.email = ""
-	@customer.should have(1).error_on(:email)
+      @customer.email = ""
+      @customer.should have(1).error_on(:email)
     end
 
     it "should verify email" do
-	verify_email('john@gmail')
-	verify_email('john')
-	verify_email('@gmail.com')
+      verify_email('john@gmail')
+      verify_email('john')
+      verify_email('@gmail.com')
     end
 
     it "should require phone number" do
-	@customer.phone = ""
-	@customer.should have(1).error_on(:phone)
+      @customer.phone = ""
+      @customer.should have(1).error_on(:phone)
     end
-
+    
     def verify_email(email_input)
-	@customer.email = email_input
-	@customer.should have(1).error_on(:email)
-	@customer.errors.on(:email).should == 'Email must be valid'
+      @customer.email = email_input
+      @customer.should have(1).error_on(:email)
+      @customer.errors.on(:email).should == 'Email must be valid'
     end
   end
 end
