@@ -187,3 +187,16 @@ input[type="radio"] {
 #coda-nav-2 ul { margin: 0 !important }
 #coda-nav-left-2 a, #coda-nav-right-2 a { padding: 4px; width: 32px; height: 32px; }
 #coda-slider-2 { clear: both }
+
+#account h2 {
+  color: #333;
+  margin-bottom: 2em;
+}
+#account p { margin: 0; line-height: 1.25em }
+
+.name { font-weight: bold; font-size: 120% }
+
+.edit { font-size: 90% }
+.edit a { color: #999 }
+.edit a:hover { color:#3098ce }
+
