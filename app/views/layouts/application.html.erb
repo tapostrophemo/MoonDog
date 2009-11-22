@@ -35,19 +35,16 @@
 </div>
 
 <div id="contentContainer">
-
-  <div id="oneColumn">
-    <%= image_tag 'onecolumn_top.png' %>
-
+  <div id="oneColumn">  
+    <div id="oneColumnHeader"><%= image_tag('onecolumn_top.png', :border => 0) %></div>
     <div id="content">
-
-      <%= yield %>
-
+	
+	<!-- Main Content -->
+        <%= yield %>	
+	
     </div>
-
-    <%= image_tag 'onecolumn_bottom.png' %>
+    <div  id="oneColumnFooter"><%= image_tag 'onecolumn_bottom.png' %></div>
   </div>
-
 </div>
 
 <div class="push"></div>

@@ -86,7 +86,6 @@ a {
    text-decoration:underline;
 }
 
-
 #contentContainer {
 	width:956px;
 	margin: 0px auto;
@@ -104,17 +103,23 @@ a {
 
 #oneColumn {
 	width:956px;
-    background-color: #f3f3f3;
-	background-image: url('/images/onecolumn_background.png');
-	background-repeat:repeat-y;
-	background-position: top left;
+    background-color: #f3f3f3;	
 	margin-top:30px;
 	margin-left:auto;
 	margin-right:auto;
 }
 
+#oneColumnHeader {
+	background-image: url('/images/onecolumn_background.png');
+	background-repeat: repeat-y;
+	background-position: top left;
+}
+
 #content {
 	padding: 30px;
+	background-image: url('/images/onecolumn_background.png');
+	background-repeat: repeat-y;
+	background-position: top left;
 	padding-top:10px;
 	clear:left;
 }
@@ -126,7 +131,6 @@ h1 {
 h2 {
 	color: #b0b0b0;
 }
-
 
 .wrapper {
     min-height: 100%;
