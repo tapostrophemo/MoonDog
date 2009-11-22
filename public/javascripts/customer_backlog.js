@@ -10,6 +10,12 @@ jQuery.fn.addCategory = function() {
 jQuery.fn.saveCategory = function() {
   this.click(function() {
     var category_value = $("#category_field").val();
+    
+    if (category_value == '') {
+	alert('A category name is required!');
+	return false;
+    }
+    
     $("#category_entry").hide();
     $("#backlog_item").show();
     $("#category").append("<h3>" + category_value + "</h3>");
