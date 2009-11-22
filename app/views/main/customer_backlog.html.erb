@@ -6,9 +6,9 @@
     <td align="right"><%= submit_tag "Add Backlog Category", :class => "add_category" %></td>
   </tr>
 </table>
-
+<br />
 <div id="category"></div>
-
+<br /><br />
 
 <div id="category_entry" style="display: none;">
   <%= label_tag "Backlog category" %>
@@ -23,10 +23,17 @@
   </p>
   <p>
     <%= label_tag "Role" %>
-    <%= select_tag "role", "<option>Developer</option>" %>
+    <%= select_tag "role", "<option>- Select -</option><option>Developer</option><option>User Interface</option><option>Graphic Designer</option>" %>
   </p>
   <p>
     <%= label_tag "Note" %>
-    <%= text_area_tag "note" %>
+    <%= text_area_tag "note", "", :id => "item_note" %>
   </p>
+  <p>
+    <%= submit_tag "Save", :id => "save_backlog" %>
+  </p>
+</div>
+
+<h3>Backlog</h3>
+<div id="backlog">
 </div>
