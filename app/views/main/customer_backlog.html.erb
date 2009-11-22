@@ -6,4 +6,34 @@
     <td align="right"><%= submit_tag "Add Backlog Category", :class => "add_category" %></td>
   </tr>
 </table>
+<br />
+<div id="category"></div>
+<br /><br />
 
+<div id="category_entry" style="display: none;">
+  <%= label_tag "Backlog category" %>
+  <%= text_field_tag "category", "", :id => "category_field" %>
+  <%= link_to "save", "/", :id => "save_category" %>
+</div>
+
+<div id="backlog_item" style="display: none;">
+  <p>
+    <%= label_tag "Description" %>
+    <%= text_field_tag "description", "", :id => "item_description" %>
+  </p>
+  <p>
+    <%= label_tag "Role" %>
+    <%= select_tag "role", "<option>- Select -</option><option>Developer</option><option>User Interface</option><option>Graphic Designer</option>" %>
+  </p>
+  <p>
+    <%= label_tag "Note" %>
+    <%= text_area_tag "note", "", :id => "item_note" %>
+  </p>
+  <p>
+    <%= submit_tag "Save", :id => "save_backlog" %>
+  </p>
+</div>
+
+<h3>Backlog</h3>
+<div id="backlog">
+</div>

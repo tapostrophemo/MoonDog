@@ -172,6 +172,15 @@ input[type="radio"] {
 	padding: 4px;
 }
 
+select {
+	background-color: #F3F3F3;
+	font-family: Verdana, "Lucida Grande", Helvetica, Arial, sans-serif;
+	font-size: 1em;
+	color: #333333;
+	line-height: 1.5em;
+	padding: 4px;
+}
+
 label {
 	display: block;
 	font-weight: bold;
