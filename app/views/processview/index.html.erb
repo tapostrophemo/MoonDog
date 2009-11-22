@@ -1,44 +1,17 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%= javascript_include_tag 'jquery-1.3.2','jquery.easing.1.3','jquery.coda-slider-2.0' %>
+<%= stylesheet_link_tag 'coda-slider-2.0' %>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
-	<script type="text/javascript" src="/javascripts/jquery-1.3.2.js"></script>
-	<script type="text/javascript" src="/javascripts/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="/javascripts/jquery.coda-slider-2.0.js"></script>
-	<link rel="stylesheet" type="text/css" href="/stylesheets/reset.css" />
-	<link rel="stylesheet" type="text/css" href="/stylesheets/coda-slider-2.0.css" />
-	
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#coda-slider-1').codaSlider({autoHeight: false, dynamicArrows: false, dynamicTabs: false });
-			$('#coda-slider-2').codaSlider({autoHeight: false, dynamicArrows: false, dynamicTabs: false });
-		});
-	</script>
-	
-	<style rel="stylesheet" type="text/css">
-		.sliderContent {
-			width: 670px;
-			height: 300px;
-		}
-		
-		#coda-nav-left-1 { margin: 0 1px 0 135px }
-		#coda-nav-left-1, #coda-nav-1, #coda-nav-right-1 { float: left }
-		#coda-nav-1 ul { margin: 0 !important }
-		#coda-nav-left-1 a, #coda-nav-right-1 a { padding: 4px; width: 32px; height: 32px; }
-		#coda-slider-1 { clear: both }
-		#coda-nav-left-2 { margin: 0 1px 0 135px }
-		#coda-nav-left-2, #coda-nav-2, #coda-nav-right-2 { float: left }
-		#coda-nav-2 ul { margin: 0 !important }
-		#coda-nav-left-2 a, #coda-nav-right-2 a { padding: 4px; width: 32px; height: 32px; }
-		#coda-slider-2 { clear: both }
-	</style>
-</head>
-<body class="coda-slider-no-js">
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#coda-slider-1').codaSlider({autoHeight: false, dynamicArrows: false, dynamicTabs: false });
+		$('#coda-slider-2').codaSlider({autoHeight: false, dynamicArrows: false, dynamicTabs: false });
+	});
+</script>
+
 <h1>The Process</h1>
 
 <div class="coda-slider-wrapper">
-	<div id="coda-nav-left-1" class="coda-nav-left"><a href="#" title="Slide left">&#171;</a></div>
+	<!--<div id="coda-nav-left-1" class="coda-nav-left"><a href="#" title="Slide left">&#171;</a></div>-->
 	<div id="coda-nav-1" class="coda-nav">
 		<ul>
 			<li class="tab1"><a href="#1"><img src="" width="32" height="32" alt="Why Moondog?" /></a></li>
@@ -46,7 +19,7 @@
 			<li class="tab3"><a href="#3"><img src="" width="32" height="32" alt="JumpDog Session" /></a></li>
 		</ul>
 	</div>
-	<div id="coda-nav-right-1" class="coda-nav-right"><a href="#" title="Slide right">&#187;</a></div>
+	<!--<div id="coda-nav-right-1" class="coda-nav-right"><a href="#" title="Slide right">&#187;</a></div>-->
 	<div class="coda-slider preload" id="coda-slider-1">
 		<div class="panel">
 			<div class="panel-wrapper">
@@ -78,7 +51,7 @@
 <br/><br/><br/>
 
 <div class="coda-slider-wrapper">
-	<div id="coda-nav-left-2" class="coda-nav-left"><a href="#" title="Slide left">&#171;</a></div>
+	<!--<div id="coda-nav-left-2" class="coda-nav-left"><a href="#" title="Slide left">&#171;</a></div>-->
 	<div id="coda-nav-2" class="coda-nav">
 		<ul>
 			<li class="tab1"><a href="#1"><img src="" width="32" height="32" alt="Work Released" /></a></li>
@@ -90,7 +63,7 @@
 			<li class="tab7"><a href="#7"><img src="" width="32" height="32" alt="Rinse, Repeat" /></a></li>
 		</ul>
 	</div>
-	<div id="coda-nav-right-2" class="coda-nav-right"><a href="#" title="Slide right">&#187;</a></div>
+	<!--<div id="coda-nav-right-2" class="coda-nav-right"><a href="#" title="Slide right">&#187;</a></div>-->
 	<div class="coda-slider preload" id="coda-slider-2">
 		<div class="panel">
 			<div class="panel-wrapper">
@@ -150,11 +123,3 @@
 		</div>
 	</div>
 </div>
-
-</body>
-</html>
-
-
-
-
-
