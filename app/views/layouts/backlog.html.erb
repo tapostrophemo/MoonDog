@@ -14,7 +14,7 @@
   <div id="header">
     <div id="nav">
       <% if @signed_in then %>
-        <a href=#>Dashboard</a>  <a href=#>Account</a> <a href=#>BaseCamp</a>  <a class="selected" href=#>Backlog</a>
+	<a href="#">Login</a> <a href=#>About</a> <a href=#>Services</a> <a href=#>Contact</a><%=link_to "Register", :controller => "sign_up", :action => "new" %>
       <% else %>
 	<a href="#">Logout</a>
       <% end %>
@@ -28,7 +28,7 @@
 <div id="headerLinksContainer">
 
   <div id="headerLinks">
-    <a href=# class=selected>Best App Ever</a>  <a href=#>Logout</a> <a href=#>Jim England</a>  <a href=#>Logout</a>
+    <a href=#>Dashboard</a>  <a href=#>Account</a> <a href=#>BaseCamp</a>  <a href=# class="selected">Backlog</a>
   </div>
 </div>
 
