@@ -4,7 +4,6 @@ class MainController < ApplicationController
 
   def index
     @signed_in = :true
-    render :layout => "index"
   end
 
   def customer
