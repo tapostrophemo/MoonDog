@@ -9,13 +9,3 @@ Scenario: View Sign-up Page
   And I should see "Customer Sign-Up"
 
 
-Scenario: Register for service
-  Given I am on the sign-up page
-  When I fill in "Last name" with "Doe"
-  And I fill in "Email" with "john@gmail.com"
-  And I fill in "Phone" with "1231231231"
-  And I fill in "City" with "Cleveland"
-  And I fill in "State" with "Ohio"
-  And I press "Save changes"
-  Then I should see "Registration Successful"
-  And I should be on the home page
