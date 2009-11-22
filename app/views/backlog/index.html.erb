@@ -32,6 +32,10 @@
     <%= text_area_tag "note", "", :id => "item_note" %>
   </p>
   <p>
+    <%= label_tag "Status" %>
+    <%= select_tag "role", "<option>- Select -</option><option>New</option><option>In Progress</option><option>Complete</option><option>Accepted</option>" %>
+  </p>
+  <p>
     <%= submit_tag "Save", :id => "save_backlog" %>
   </p>
 </div>
