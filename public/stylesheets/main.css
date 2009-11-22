@@ -32,15 +32,13 @@ a {
 
 
 #headerContainer {
-    background-color: #001d39;
-
+	background-image: url('/images/slice2.png');
 }
 
 #header {
 	width:940px;
 	margin: 0px auto;
-	padding-top:10px;
-	padding-bottom:15px;
+	height: 100px;
 }
 
 #headerLinksContainer {
@@ -135,26 +133,17 @@ h2 {
     margin: 0 auto -120px;
 }
 
-#footerContainer, .push {
+.push {
     height: 160px;
 }
 
 #footerContainer {
-   background-color: #001d39;
+	background-image: url('/images/MoonDog-home_14.gif');
 }
 
 #footer {
 	color: #f9f9f9;
 	margin: 0 auto;
-	width: 940px;
-}
-
-#footer p {
-   color: #f9f9f9;
-   padding:10px;
-   font-weight:bold;
-   font-size:12px;
-   text-align:right;
 }
 
 input[type="text"], input.text {
@@ -260,3 +249,14 @@ label {
 .edit a { color: #999 }
 .edit a:hover { color:#3098ce }
 
+.sub_paragraph h1 { color: #99c017; font-weight: normal; font-size: 125%;}
+.sub_paragraph h2 { color: #143c64; font-weight: normal; font-size: 100%;}
+.sub_paragraph p { color: #676035; margin-top: 0.5em;}
+p.tagline { color: #99c017; font-size: 250%; padding: 0.5; padding-left: 40px;}
+p.sub_tagline { color: #554718; font-size: 150%; padding: 25px; padding-left: 40px; margin-top: 30px; background-color: #eae3cb;}
+
+p.copyright { color: #f3f3f3;}
+
+.footer_text { color: #f3f3f3; font-size: 90%;}
+.footer_links { text-decoration: underline;}
+.footer_logo { background-image: url('/images/MoonDog-home_12.gif');}
