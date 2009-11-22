@@ -1,5 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :sign_up
+  map.resources :backlog
 
   map.root :controller => "main"
 

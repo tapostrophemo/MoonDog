@@ -12,9 +12,6 @@ class MainController < ApplicationController
   def customer_account
   end
 
-  def customer_backlog
-  end
-
   def developer
   end
 
