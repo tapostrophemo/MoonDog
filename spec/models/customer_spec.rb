@@ -62,11 +62,6 @@ describe Customer do
 	@customer.should have(1).error_on(:phone)
     end
 
-    it "should require a contact method" do
-	@customer.contact_method = 0
-	@customer.should have(1).error_on(:contact_method)
-    end
-    
     def verify_email(email_input)
 	@customer.email = email_input
 	@customer.should have(1).error_on(:email)
