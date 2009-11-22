@@ -193,11 +193,11 @@ label {
 #coda-nav-left-2 a, #coda-nav-right-2 a { padding: 4px; width: 32px; height: 32px; }
 #coda-slider-2 { clear: both }
 
-#account h2 {
+#account h2, #projects h2 {
   color: #333;
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
 }
-#account p { margin: 0; line-height: 1.25em }
+#account p, #projects p { margin: 0; line-height: 1.25em }
 
 .name { font-weight: bold; font-size: 120% }
 
