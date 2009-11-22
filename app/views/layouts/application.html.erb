@@ -12,14 +12,16 @@
 
 <div id="headerContainer">
   <div id="header">
+
     <div id="nav">
-      <% if @signed_in then %>
-	<a href="#">Login</a> <a href=#>About</a> <a href=#>Services</a> <a href=#>Contact</a><%=link_to "Register", :controller => "sign_up", :action => "new" %>
-      <% else %>
-	<a href="#">Logout</a>
-      <% end %>
+<% if @signed_in then %>
+		<a href="#">Login</a> <a href=#>About</a> <a href=#>Services</a> <a href=#>Contact</a><%=link_to "Register", :controller => "sign_up", :action => "new" %>
+<% else %>
+		<a href="#">Logout</a>
+<% end %>
     </div>
-    <%= image_tag 'logo_blue.png' %>
+
+    <%= image_tag @signed_in ? 'logo_blue_lg.png' : 'logo_blue.png' %>
 
   </div>
 </div>
