@@ -172,6 +172,11 @@ input[type="radio"] {
 	padding: 4px;
 }
 
+label {
+	display: block;
+	font-weight: bold;
+}
+
 .sliderContent {
 	width: 670px;
 	height: 300px;

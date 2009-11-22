@@ -1,6 +1,9 @@
 class MainController < ApplicationController
 
+  @signed_in = :false
+
   def index
+    @signed_in = :true
   end
 
   def customer
