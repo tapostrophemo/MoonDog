@@ -8,8 +8,8 @@ class SignUpController < ApplicationController
     @customer = Customer.new(params[:customer])
     if @customer.save
       flash[:notice] = "Registration Successful"
-      redirect_to :controller => "main", :action => "index" 
     end
+    redirect_to :controller => "main", :action => "index" 
   end
   
 end
