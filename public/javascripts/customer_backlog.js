@@ -26,9 +26,10 @@ jQuery.fn.saveCategory = function() {
 jQuery.fn.saveBacklog = function() {
   this.click(function() {
     var description = $("#item_description").val();
-    $("#backlog").append("<p>" + description + "</p>");
+    $("#backlog").append('<div class=\"draggable\">' + description + " <a href=#>edit</a>");
     $("#item_description").val("");
     $("#item_note").val("");
+    $(".draggable").draggable({cursor: 'crosshair', scope: "backlog"});
     return false;
   });
 };
@@ -37,4 +38,6 @@ $(document).ready(function() {
  $(".add_category").addCategory();
  $("#save_category").saveCategory();
  $("#save_backlog").saveBacklog();
+ $(".draggable").draggable({cursor: 'crosshair', scope: "backlog"});
+ $("#droppable").droppable({hoverClass: "drop-allowed", scope: "backlog"});
 });
