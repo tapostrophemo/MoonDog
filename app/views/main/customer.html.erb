@@ -1,6 +1,7 @@
-TODO: tabs
-<br>
-<a href="/main/customer_account">Account</a>
-<a href="/main/customer_basecamp">Basecamp</a>
-<a href="/main/customer_backlog">Backlog</a>
+TODO: turn the following into a helper(?)
+<% if @tabs != nil then %>
+<ul id="tabs">
+<% @tabs.each { |url, label| %> <li><a href="/main/<%=url%>"><%=label%></a></li> <% } %>
+</ul>
+<% end %>
 
