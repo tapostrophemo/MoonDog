@@ -262,5 +262,5 @@ p.sub_tagline { color: #554718; font-size: 150%; padding: 25px; padding-left: 40
 p.copyright { color: #f3f3f3;}
 
 .footer_text { color: #f3f3f3; font-size: 90%;}
-.footer_links { text-decoration: underline;}
+.footer_links { color: #f3f3f3; font-size: 90%; text-decoration: underline;}
 .footer_logo { background-image: url('/images/MoonDog-home_12.gif');}
