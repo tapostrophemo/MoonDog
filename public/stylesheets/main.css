@@ -264,3 +264,8 @@ p.copyright { color: #f3f3f3;}
 .footer_text { color: #f3f3f3; font-size: 90%;}
 .footer_links { color: #f3f3f3; font-size: 90%; text-decoration: underline;}
 .footer_logo { background-image: url('/images/MoonDog-home_12.gif');}
+
+#user_nav {
+   float: right;
+   font-size: 12px;
+}
