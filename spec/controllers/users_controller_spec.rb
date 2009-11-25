@@ -2,15 +2,17 @@ require File.dirname(__FILE__) + '/../spec_helper'
  
 describe UsersController do
 
+  describe "handling GET /user/new" do
+    it "should render new template" do
+      get :new
+      response.should render_template(:new)
+    end
+  end
+
   describe "Handlig POST user" do
     before(:each) do
       @user = mock_model(User, :to_param => "1")
       User.stub!(:new).and_return(@user)
-    end
-    
-    it "should render new template" do
-      get :new
-      response.should render_template(:new)
     end
     
     describe "with successful save" do
@@ -25,8 +27,7 @@ describe UsersController do
         do_post
       end
       
-      it "create action should redirect when model is valid" do
-        User.any_instance.stubs(:valid?).returns(true)
+      it "should redirect when model is valid" do
         do_post
         response.should redirect_to(root_url)
       end
@@ -39,7 +40,6 @@ describe UsersController do
       end
       
       it "should render new template when model is invalid" do
-        User.any_instance.stubs(:valid?).returns(false)
         do_post
         response.should render_template(:new)
       end
@@ -50,7 +50,9 @@ describe UsersController do
     
     before(:each) do
       @user = mock_model(User)
-      User.stub!(:find).and_return(@user)
+      @user_session = mock_model(UserSession)
+      UserSession.stub!(:find).and_return(@user_session)
+      @user_session.stub(:record).and_return(@user)
     end
   
     def do_get
@@ -67,12 +69,12 @@ describe UsersController do
       response.should render_template(:edit)
     end
 
-    it "should find the user requested" do
-      User.should_receive(:find).and_return(@user)
+    it "should find the currently logged in user requested" do
+      @user_session.should_receive(:record).and_return(@user)
       do_get
     end
 
-    it "should assign the found User for the view" do
+    it "should assign the currently logged in user for the view" do
       do_get
       assigns[:user].should equal(@user)
     end
@@ -82,7 +84,9 @@ describe UsersController do
 
     before(:each) do
       @user = mock_model(User, :to_param => "1")
-      User.stub!(:find).and_return(@user)
+      @user_session = mock_model(UserSession)
+      UserSession.stub!(:find).and_return(@user_session)
+      @user_session.stub(:record).and_return(@user)
     end
 
     describe "with successful update" do
@@ -92,12 +96,12 @@ describe UsersController do
         put :update, :id => "1"
       end
 
-      it "should find the user requested" do
-        User.should_receive(:find).with("1").and_return(@user)
+      it "should find the currently logged in user requested" do
+        @user_session.should_receive(:record).and_return(@user)
         do_put
       end
 
-      it "should update the found user" do
+      it "should update the current user" do
         do_put
         assigns(:user).should equal(@user)
       end
@@ -108,7 +112,6 @@ describe UsersController do
       end
           
       it "update action should redirect when model is valid" do
-        User.any_instance.stubs(:valid?).returns(true)
         do_put
         response.should redirect_to(root_url)
       end
@@ -123,7 +126,6 @@ describe UsersController do
       end
       
       it "should render edit template when model is invalid" do
-        User.any_instance.stubs(:valid?).returns(false)
         do_put
         response.should render_template(:edit)
       end
