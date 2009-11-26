@@ -8,10 +8,7 @@ describe User do
       :email => "john.doe@gmail.com",
       :password => "abcdefg",
       :password_confirmation => "abcdefg",
-      :password_salt =>  salt,
-      :crypted_password => Authlogic::CryptoProviders::Sha512.encrypt("benrocks" + salt),
-      :persistence_token =>  Authlogic::Random.hex_token
-    }
+     }
   end
   
   before(:each) do
@@ -19,11 +16,7 @@ describe User do
     @user.attributes = @valid_attributes
   end
 
-  it "should create a new instance given valid attributes" do
-    User.create!(@valid_attributes)
-  end
-
-  it "should be valid" do
+   it "should be valid" do
     @user.should be_valid
   end
 
