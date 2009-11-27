@@ -16,14 +16,24 @@
   <div id="header">
     <%= image_tag 'moondog-header2.png', :style => 'margin-left: -45px; margin-top: 2px;'%>
     <div id="user_nav">
+      <% if current_user -%>
+        <%= link_to "Edit profile", edit_user_path(:current) %> |
+        <%= link_to "Logout", logout_path %>
+      <% else -%>
+        <%= link_to "Register", new_user_path %> |
+        <%= link_to "Login", login_path %>
+      <% end %>
     </div>
   </div>
 </div>
 
 
 <div id="contentContainer">
-	
-      <%= yield %>
+  <% if flash[:notice] -%>
+    <div id="notice"><%= flash[:notice] %></div>
+  <% end -%>
+
+  <%= yield %>
 
 </div>
 

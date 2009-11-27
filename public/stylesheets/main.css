@@ -161,6 +161,17 @@ input[type="text"], input.text {
 	-webkit-border-radius: 5px;
 }
 
+input[type="password"], input.password {
+	border: 1px solid #000;
+	background-color: #F3F3F3;
+	font-family: Verdana, "Lucida Grande", Helvetica, Arial, sans-serif;
+	font-size: 1em;
+	color: #333333;
+	line-height: 1.5em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
 input[type="button"], input[type="submit"] {
 	border: 1px solid #000;
 	background-color: #F3F3F3;
@@ -268,4 +279,19 @@ p.copyright { color: #f3f3f3;}
 #user_nav {
    float: right;
    font-size: 12px;
+   margin-top: 20px;
+   color: white;
+}
+
+#user_nav a {
+   color: white;
+}
+
+#notice {
+   border: 1px solid green;
+   padding: 1em;
+   margin: 1em;
+   margin-bottom: 2em;
+   background-color: lightgray;
+   font: bold smaller sans-serif;
 }
