@@ -46,7 +46,7 @@ describe UserSessionsController do
 
       it "should render new template when model is invalid" do
         do_post
-        response.should render_template(:new)
+        response.should redirect_to(login_path)
       end
     end
   end  

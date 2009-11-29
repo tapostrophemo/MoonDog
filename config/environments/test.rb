@@ -33,5 +33,4 @@ config.gem "webrat", :lib => false, :version => ">=0.5.3"
 config.gem "cucumber", :lib => false, :version => ">=0.4.3"
 config.gem "pickle", :lib => false, :version => ">=0.1.21"
 config.gem "launchy", :lib => false, :version => ">=0.3.3"
-config.gem "mocha", :lib => false, :version => ">=0.9.8"
-
+config.gem "thoughtbot-factory_girl", :lib => "factory_girl", :source => "http://gems.github.com"
