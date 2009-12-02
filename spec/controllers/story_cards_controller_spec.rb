@@ -47,10 +47,10 @@ describe StoryCardsController do
         assigns[:story_card].should equal(mock_story_card)
       end
 
-      it "redirects to the created story_card" do
+      it "redirects to the index" do
         StoryCard.stub!(:new).and_return(mock_story_card(:save => true))
         post :create, :story_card => {}
-        response.should redirect_to(story_card_url(mock_story_card))
+        response.should redirect_to(story_cards_path)
       end
     end
 

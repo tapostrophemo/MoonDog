@@ -8,7 +8,7 @@
 
 <% @story_cards.each do |story_card| %>
   <tr>
-    <td><%=h story_card.title %></td>
+    <td><%= link_to h(story_card.title), edit_story_card_path(story_card) %></td>
     <td><%=h story_card.description %></td>
     <td><%= link_to 'Show', story_card %></td>
     <td><%= link_to 'Edit', edit_story_card_path(story_card) %></td>
