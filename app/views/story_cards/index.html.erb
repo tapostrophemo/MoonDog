@@ -1,0 +1,22 @@
+<h1>Listing story_cards</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+  </tr>
+
+<% @story_cards.each do |story_card| %>
+  <tr>
+    <td><%=h story_card.title %></td>
+    <td><%=h story_card.description %></td>
+    <td><%= link_to 'Show', story_card %></td>
+    <td><%= link_to 'Edit', edit_story_card_path(story_card) %></td>
+    <td><%= link_to 'Destroy', story_card, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Add a new card', new_story_card_path %>

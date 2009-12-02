@@ -1,0 +1,13 @@
+<p>
+  <b>Title:</b>
+  <%=h @story_card.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @story_card.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_story_card_path(@story_card) %> |
+<%= link_to 'Back', story_cards_path %>
