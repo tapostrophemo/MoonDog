@@ -85,10 +85,10 @@ describe StoryCardsController do
         assigns[:story_card].should equal(mock_story_card)
       end
 
-      it "redirects to the story_card" do
+      it "redirects to the index" do
         StoryCard.stub!(:find).and_return(mock_story_card(:update_attributes => true))
         put :update, :id => "1"
-        response.should redirect_to(story_card_url(mock_story_card))
+        response.should redirect_to(story_cards_path)
       end
     end
 

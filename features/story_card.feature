@@ -29,5 +29,6 @@ Feature: Story Carding
     | Title       | Very important feature      |
     | Description | Something more meaningful   |
     And I press "Save"
-    Then I should see "Very important feature"
-
+    Then I should be on the story card index page
+    And I should see "Very important feature"
+    

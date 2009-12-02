@@ -37,7 +37,7 @@ class StoryCardsController < ApplicationController
 
     respond_to do |format|
       if @story_card.save
-        flash[:notice] = 'StoryCard was successfully created.'
+        flash[:notice] = 'Story Card was successfully created.'
         format.html { redirect_to(story_cards_path) }
         format.xml  { render :xml => @story_card, :status => :created, :location => @story_card }
       else
@@ -47,15 +47,13 @@ class StoryCardsController < ApplicationController
     end
   end
 
-  # PUT /story_cards/1
-  # PUT /story_cards/1.xml
   def update
     @story_card = StoryCard.find(params[:id])
 
     respond_to do |format|
       if @story_card.update_attributes(params[:story_card])
-        flash[:notice] = 'StoryCard was successfully updated.'
-        format.html { redirect_to(@story_card) }
+        flash[:notice] = 'Story Card was successfully updated.'
+        format.html { redirect_to(story_cards_path) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

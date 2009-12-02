@@ -19,6 +19,6 @@ describe "/story_cards/index.html.erb" do
   it "renders a list of story_cards" do
     render
     response.should have_tag("tr>td", "value for title".to_s, 2)
-    response.should have_tag("tr>td", "value for description".to_s, 2)
-  end
+    response.should have_tag("a[title='value for description']", 2)
+  end 
 end

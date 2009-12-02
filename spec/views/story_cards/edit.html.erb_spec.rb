@@ -16,7 +16,7 @@ describe "/story_cards/edit.html.erb" do
 
     response.should have_tag("form[action=#{story_card_path(@story_card)}][method=post]") do
       with_tag('input#story_card_title[name=?]', "story_card[title]")
-      with_tag('input#story_card_description[name=?]', "story_card[description]")
+      with_tag('textarea#story_card_description[name=?]', "story_card[description]")
     end
   end
 end
