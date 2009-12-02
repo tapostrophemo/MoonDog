@@ -7,7 +7,7 @@ Feature: User Authentication
     Given a user exists with username: "Sam", password: "pass"
     And I am on the home page
 
-  Scenario: Login
+  Scenario: Login low level
     When I follow "Login"
     And I fill in "Username" with "Sam" 
     And I fill in "Password" with "pass"
@@ -19,6 +19,12 @@ Feature: User Authentication
     And I should not see "Login"
     And I should not see "Register"
 
+  Scenario: Login high level
+    When I follow "Login"
+    And I login using "Sam", "pass"
+    Then I should be on the home page
+    And I should be successfully logged in as "Sam"
+
   Scenario: Logout
     Given I am logged in
     When I follow "Logout"
@@ -28,11 +34,14 @@ Feature: User Authentication
     And I should see "Register"
     And I should not see "Logout"
     And I should not see "Edit profile"
+    
+  Scenario: Logout high level
+    Given I am logged in
+    When I follow "Logout"
+    Then I should be logged out
 
   Scenario: Unsuccessful login
     When I follow "Login"
-    And I fill in "Username" with "Sam"
-    And I fill in "Password" with "badpass"
-    And I press "Login"
+    And I login using "Sam", "badpass"
     Then I should be on the login page
     And I should see "Invalid Username/Password"
