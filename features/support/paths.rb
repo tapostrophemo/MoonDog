@@ -20,6 +20,12 @@ module NavigationHelpers
     when /the user registration page/
       '/users/new'
       
+    when /the story card index page/
+      '/story_cards'
+
+    when /the new story card page/
+      '/story_cards/new'
+      
     # Add more mappings here.
     # Here is a more fancy example:
     #
