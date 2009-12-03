@@ -17,6 +17,13 @@ Feature: Story Carding
     Then I should be on the story card index page
     And I should see "title of my card"
 
+  Scenario: Story card validation
+    Given I am logged in
+    And I am on the new story card page
+    When I press "Save"
+    Then I should see "Title can't be blank"
+    And I should see "Description can't be blank"
+
   Scenario: Edit a story card
     Given I am logged in
     And I have the following story cards
